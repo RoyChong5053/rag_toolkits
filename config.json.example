@@ -1,0 +1,54 @@
+{
+  "api": {
+    "openrouter": {
+      "api_key": "",
+      "base_url": "https://openrouter.ai/api/v1",
+      "site_url": "RAG-WebUI",
+      "site_name": "RAG-WebUI"
+    },
+    "local": {
+      "base_url": "http://127.0.0.1:12888/v1"
+    },
+    "deepseek": {
+      "api_key": "",
+      "base_url": "https://api.deepseek.com/v1"
+    }
+  },
+  "rag": {
+    "models": {
+      "openrouter": "nvidia/nemotron-nano-12b-v2-vl:free",
+      "deepseek": "deepseek-chat",
+      "local": "local-model"
+    },
+    "max_input_chars": 12000,
+    "request_interval": 1,
+    "overlap_paragraphs": 1,
+    "auto_save_interval": 5,
+    "keep_intermediate_files": true,
+    "max_retries_cloud": 5,
+    "max_retries_local": 2,
+    "retry_delay_base": 2
+  },
+  "ocr": {
+    "models": {
+      "openrouter": "nvidia/nemotron-nano-12b-v2-vl:free",
+      "deepseek": "deepseek-chat",
+      "local": "local-model"
+    },
+    "input_dir": "./input/photo",
+    "output_dir": "output/ocr",
+    "default_prompt": "请帮我提取图片中的文字内容，如果图片中没有文字，请描述图片的主要内容和信息。",
+    "max_tokens": 2000,
+    "temperature": 0.1,
+    "timeout": 120,
+    "retry_attempts": 3,
+    "delay_between_requests": 1
+  },
+  "preprocess": {
+    "input_dir": "input/raw",
+    "output_dir": "input/clean",
+    "remove_emoji": true,
+    "split_threshold_mb": 5,
+    "target_mb_per_file": 1
+  }
+}

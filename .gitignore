@@ -1,0 +1,32 @@
+# API keys / 敏感配置
+config.json
+config.json.old
+ocr_config.json
+ocr_config.json.old
+
+# 自动生成的任务清单
+.task_manifest.json
+
+# 虚拟环境
+venv/
+.venv/
+
+# Python 缓存
+__pycache__/
+*.pyc
+*.pyo
+
+# 用户数据（不纳入版本控制）
+input/
+output/
+
+# 运行产生的中间/临时数据
+checkpoints/
+intermediate/
+logs/
+*.log
+*.old
+
+# 系统文件
+.DS_Store
+Thumbs.db
